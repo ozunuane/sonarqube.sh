@@ -3,7 +3,7 @@
 echo "sonarqube update"
 echo
 sleep 2
-su - vagrant
+su - ubuntu
 sudo yum update -y
 
  sudo yum install java-11-openjdk-devel -y
@@ -26,7 +26,7 @@ sudo yum install unzip -y
 sudo unzip /opt/sonarqube-9.3.0.51899.zip -y
 
 echo " Change ownership to the user and Switch to Linux binaries directory to start service"
-sudo chown -R vagrant:vagrant /opt/sonarqube-9.3.0.51899 -y
+sudo chown -R ubuntu:ubuntu /opt/sonarqube-9.3.0.51899 -y
 cd /opt/sonarqube-9.3.0.51899/bin/linux-x86-64
 ./sonar.sh start
 sleep 3
